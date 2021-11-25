@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLINIQUE</title>
+    <link href="lib/fullpage.min.css" rel="stylesheet"/>
+    <link href="lib/XEIcon-2.2.0/xeicon.min.css" rel="stylesheet"/>
+    <link href="css/index.css" rel="stylesheet"/>
+    <script src="lib/jquery-3.6.0.min.js"></script>
+    <script src="lib/fullpage.min.js"></script>
+    <!-- <script src="lib/fullPage.js-master/examples/examples.js"></script> -->
+    <script>
+        $(function(){
+            var myFullpage = new fullpage('#fullpage', {
+                verticalCentered: true,
+                navigation: true, 
+                navigationPosition: 'right', 
+                navigationTooltips: ['Main', 'BEST10', 'Preview', 'Event', 'Brand', 'SNS', 'Info'],
+                showActiveTooltip : false,//true
+            });
+            //header
+            $('.menu > li').mouseenter(function(){
+                $('.depth02, .back').stop().slideDown();
+            });
+            $('.menu > li').mouseleave(function(){
+                $('.depth02, .back').stop().slideUp();
+            });
+            $('.xi-search').click(function(){
+                $('.search').slideToggle();
+            });
+            //cont02
+            $('#section2 .btn button').click(function(){
+                $('#section2 .btn button').removeClass('on');
+                $(this).addClass('on');
+
+                $('#section2 .cont > div').removeClass('on');
+                $('#section2 .cont > div').eq($(this).index()).addClass('on');
+
+            });
+            
+            
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div>
+            <h1><a href="#">
+                <img src="img/logo.png" alt="크리니크"/>
+            </a></h1>
+            <nav>
+                <ul class="menu">
+                    <li class="depht01">
+                        <a href="#">Best</a>
+                        <ul class="depth02">
+                            <li><a href="#">Best Seller</a></li>
+                        </ul><!-- depth02 end -->
+                    </li><!-- depth01 end -->
+                    <li class="depht01">
+                        <a href="#">skin_care</a>
+                        <ul class="depth02">
+                            <li><a href="#">Skin/Lotion</a></li>
+                            <li><a href="#">Cream</a></li>
+                            <li><a href="#">Suncare</a></li>
+                            <li><a href="#">Mask</a></li>
+                            <li><a href="#">Cleansing</a></li>
+                        </ul><!-- depth02 end -->
+                    </li><!-- depth01 end -->
+                    <li class="depht01">
+                        <a href="#">make_up</a>
+                        <ul class="depth02">
+                            <li><a href="#">Face</a></li>
+                            <li><a href="#">Eye</a></li>
+                            <li><a href="#">Lip</a></li>
+                            <li><a href="#">Tool</a></li>
+                        </ul><!-- depth02 end -->
+                    </li><!-- depth01 end -->
+                    <li class="depht01">
+                        <a href="#">for_men</a>
+                        <ul class="depth02">
+                            <li><a href="#">Skin/Lotion</a></li>
+                            <li><a href="#">Cleansing</a></li>
+                            <li><a href="#">Gift-set</a></li>
+                            <li><a href="#">Perfume</a></li>
+                            <li><a href="#">Best</a></li>
+                        </ul><!-- depth02 end -->
+                    </li><!-- depth01 end -->
+                    <li class="depht01">
+                        <a href="#">event</a>
+                        <ul class="depth02">
+                            <li><a href="#">Special-gift</a></li>
+                            <li><a href="#">Mall-event</a></li>
+                        </ul><!-- depth02 end -->
+                    </li><!-- depth01 end -->
+                </ul><!-- menu end -->
+            </nav>
+                <i class="xi-search"><span>검색하기</span></i>
+        </div><!-- header top -->
+        <div class="search">
+            <input type="text" placeholder="정보를 입력해주세요"/>
+            <button>검색</button>
+        </div><!-- search end -->
+        <div class="back">
+
+        </div>
+    </header>
+
+    <div id="fullpage">
+        <div class="section " id="section0">
+            <video id="myVideo" loop muted data-autoplay>
+                <source src="img/main.mp4" type="video/mp4">
+                <!-- <source src="imgs/flowers.webm" type="video/webm"> -->
+            </video>
+        </div><!-- #section0 end -->
+
+        <div class="section fp-auto-height" id="section1">
+            <h1>Best 10</h1>
+            <button>View More</button>
+            <div class="slide" id="slide1">
+                <div class="in">
+                    <div>
+                        <a href="#">
+                            <img src="img/best01.png" alt="모이스춰 써지 100시간 오토-리플레니싱 하이드레이터"/>
+                            <dl>
+                                <dt>모이스춰 써지 100시간 오토-
+                                    리플레니싱 하이드레이터</dt>
+                                <dd>₩55,000</dd>
+                            </dl>
+                        </a>
+                    </div><!-- 1 -->
+                    <div>
+                        <a href="#">
+                            <img src="img/best02.png" alt="클래리파잉 로션 트와이스 어 
+                            데이 엑스폴리에이터 2"/>
+                            <dl>
+                                <dt>클래리파잉 로션 트와이스 어 
+                                    데이 엑스폴리에이터 2</dt>
+                                <dd>₩47,000</dd>
+                            </dl>
+                        </a>
+                    </div><!-- 2 -->
+                    <div>
+                        <a href="#">
+                            <img src="img/best03.png" alt="드라마티컬리 디퍼런트
+                            모이스춰라이징 젤"/>
+                            <dl>
+                                <dt>드라마티컬리 디퍼런트
+                                    모이스춰라이징 젤</dt>
+                                <dd>₩49,000</dd>
+                            </dl>
+                        </a>
+                    </div><!-- 3 -->
+                    <div>
+                        <a href="#">
+                            <img src="img/best04.png" alt="블러셔 치크팝"/>
+                            <dl>
+                                <dt>크리니크 No.1 블러셔<br/>
+                                    '치크팝'</dt>
+                                <dd>₩32,000</dd>
+                            </dl>
+                        </a>
+                    </div><!-- 4 -->
+                    <div>
+                        <a  href="#">
+                            <img src="img/best05.png" alt="자연스러운 컬링
+                            래쉬 파워 마스카라"/>
+                            <dl>
+                                <dt>자연스러운 컬링<br/>
+                                    래쉬 파워 마스카라</dt>
+                                <dd>₩36,000</dd>
+                            </dl>
+                        </a>
+                    </div><!-- 5 -->
+                </div><!-- .in end -->
+            </div><!-- #slide1 end -->
+
+            <div class="slide" id="slide2">
+                <!-- <h1>BEST 10</h1> -->
+                <div class="in">
+                    <div>
+                        <a href="#">
+                            <img src="img/best06.png" alt="안티-블레미쉬 솔루션 올-오버 클리어링 트리트먼트 오일-프리"/>
+                            <dl>
+                                <dt>안티-블레미쉬 솔루션 올-오버 클리어링 트리트먼트 오일-프리</dt>
+                                <dd>₩34,000</dd>
+                            </dl>
+                        </a>
+                    </div><!-- 6 -->
+                    <div>
+                        <a href="#">
+                            <img src="img/best07.png" alt="올 어바웃 클린 리퀴드 페이셜 솝 (마일드/오일리)"/>
+                            <dl>
+                                <dt>올 어바웃 클린 리퀴드 페이셜 솝 (마일드/오일리)</dt>
+                                <dd>₩34,000</dd>
+                            </dl>
+                        </a>
+                    </div><!-- 7 -->
+                    <div>
+                        <a href="#">
+                            <img src="img/best08.png" alt="모이스춰 써지 하이드레이팅 수퍼차지드 컨센트레이트"/>
+                            <dl>
+                                <dt>모이스춰 써지 하이드레이팅 수퍼차지드 컨센트레이트</dt>
+                                <dd>₩62,000</dd>
+                            </dl>
+                        </a>
+                    </div><!-- 8 -->
+                    <div>
+                        <a href="#">
+                            <img src="img/best09.png" alt="안티-블레미쉬 솔루션 클래리파잉 로션"/>
+                            <dl>
+                                <dt>안티-블레미쉬 솔루션 클래리파잉 로션</dt>
+                                <dd>₩31,000</dd>
+                            </dl>
+                        </a>
+                    </div><!-- 9 -->
+                    <div>
+                        <a href="#">
+                            <img src="img/best10.png" alt="테이크 더 데이 오프 메이크업 리무버 포 리드, 래쉬 앤 립스"/>
+                            <dl>
+                                <dt>테이크 더 데이 오프 메이크업 리무버 포 리드, 래쉬 앤 립스</dt>
+                                <dd>₩35,000</dd>
+                            </dl>
+                        </a>
+                    </div><!-- 10 -->
+                </div><!-- .in end -->
+            </div><!-- #slide1 end -->
+        </div><!-- #section1 end -->
+        
+        <div class="section" id="section2">
+            <div class="cont">
+                <div class="skin on">
+                    <div class="left">
+                        <img src="img/cont01-sk01.png" alt="skin"/>
+                    </div><!-- .left end -->
+                    <div class="center">
+                        <h1>Preview</h1>
+                        <img src="img/cont01-sk-center.png" alt="skin"/>
+                        <p>크리니크에서 내 피부에 딱 맞는 스킨케어를 만나보세요</p>
+                    </div><!-- .center end -->
+                    <div class="right">
+                        <div class="right_top">
+                            <img src="img/cont01-sk02.png" alt="skin"/>
+                        </div>
+                        <div class="right_bottom">
+                            <img src="img/cont01-sk03.png" alt="skin"/>
+                        </div>
+                    </div><!-- .right end -->
+                </div><!-- .skin end -->
+
+                <div class="make">
+                    <div class="right_left">
+                        <img src="img/cont01-ma01.png" alt="skin"/>
+                    </div><!-- .left end -->
+                    <div class="center">
+                        <h1>Preview</h1>
+                        <img src="img/cont01-ma-center.png" alt="skin"/>
+                        <p>크리니크만의 탁월한 기술과 자연스러운 컬러</p>
+                    </div><!-- .center end -->
+                    <div class="left">
+                        <div class="right_top">
+                            <img src="img/cont01-ma02.png" alt="skin"/>
+                        </div>
+                        <div class="right_bottom">
+                            <img src="img/cont01-ma03.png" alt="skin"/>
+                        </div>
+                    </div><!-- .right end -->
+                </div><!-- .make end -->
+
+                <div class="men">
+                    <div class="left">
+                        <img src="img/cont01-men01.png" alt="skin"/>
+                    </div><!-- .left end -->
+                    <div class="center">
+                        <h1>Preview</h1>
+                        <img src="img/cont01-men-center.png" alt="skin"/>
+                        <p>남성 피부 고민을 해결해주는 '맞춤형 케어 라인'</p>
+                    </div><!-- .center end -->
+                    <div class="right">
+                        <div class="right_top">
+                            <img src="img/cont01-men02.png" alt="skin"/>
+                        </div>
+                        <div class="right_bottom">
+                            <img src="img/cont01-men03.png" alt="skin"/>
+                        </div>
+                    </div><!-- .right end -->
+                </div><!-- .men end -->
+
+                <div class="spe">
+                    <div class="right_left">
+                        <img src="img/cont01-sp01.png" alt="skin"/>
+                    </div><!-- .left end -->
+                    <div class="center">
+                        <h1>Preview</h1>
+                        <img src="img/cont01-sp-center.png" alt="skin"/>
+                        <p>크리니크 공식몰에서 만날수 있는 특별한 이벤트</p>
+                    </div><!-- .center end -->
+                    <div class="left">
+                        <div class="right_top">
+                            <img src="img/cont01-sp02.png" alt="skin"/>
+                        </div>
+                        <div class="right_bottom">
+                            <img src="img/cont01-sp03.png" alt="skin"/>
+                        </div>
+                    </div><!-- .right end -->
+                </div><!-- .spe end -->
+
+                <div class="all">
+                    <div class="left">
+                        <img src="img/cont01-all01.png" alt="skin"/>
+                    </div><!-- .left end -->
+                    <div class="center">
+                        <h1>Preview</h1>
+                        <img src="img/cont01-all-center.png" alt="skin"/>
+                        <p>크리니크에서 내 피부에 딱 맞는 스킨케어를 만나보세요</p>
+                    </div><!-- .center end -->
+                    <div class="right">
+                        <div class="right_top">
+                            <img src="img/cont01-all02.png" alt="skin"/>
+                        </div>
+                        <div class="right_bottom">
+                            <img src="img/cont01-all03.png" alt="skin"/>
+                        </div>
+                    </div><!-- .right end -->
+                </div><!-- .all end -->
+            </div><!-- .cont end -->
+
+            <div class="btn">
+                    <button class="on">skin_care</button>
+                    <button>make_up</button>
+                    <button>for_man</button>
+                    <button>Special</button>
+                    <button>All</button>
+            </div><!-- .btn end -->
+        </div><!-- #section2 end -->
+
+        <div class="section fp-auto-height" id="section3">
+            <h1>Event</h1>
+            <button>View More</button>
+            <div class="event_in">
+                <div>
+                    <a href="#">
+                        <img src="img/cont02-1.png" alt="event"/>
+                    </a><!-- 1 -->
+                </div>
+                <div>
+                    <a href="#">
+                        <img src="img/cont02-2.png" alt="event"/>
+                    </a><!-- 2 -->
+                </div>
+                <div>
+                    <a href="#">
+                        <img src="img/cont02-3.png" alt="event"/>
+                    </a><!-- 3 -->
+                </div>
+            </div><!-- .in end -->
+        </div><!-- #section3 end -->
+
+        <div class="section fp-auto-height" id="section4">
+            <h1>크리니크의 깨끗한 철학</h1>
+            <p>크리니크는 저자극 성분들을 사용하기 위해 언제나 노력합니다.<br/>
+                50년 이상의 엄격한 테스트를 통해 얻은 지식을 활용하여 피부에 건강하고 안전한<br/>
+                성분들로 개발하여 크리니크의 깨끗한 철학을 지켜 나갈 것을 약속합니다.</p>
+            <p>No 파라벤  No 인공향료<br>
+                건강하고 행복한 피부</p>
+            <button>View More</button>
+        </div><!-- #section4 end -->
+
+        <div class="section fp-auto-height" id="section5">
+            <h1># cliniquekorea</h1>
+            <div class="sns_in">
+                <div class="sns">
+                    <div>
+                        <p>
+                            <img src="img/sns-i-01.png" alt="인스타그램"/>
+                            Instagram
+                        </p>
+                        <button>View More</button>
+                    </div>
+                    <img src="img/sns01.png" alt="인스타그램"/>
+                </div><!-- .sns01 end -->
+                <div class="sns">
+                    <div>
+                        <p>
+                            <img src="img/sns-i-02.png" alt="YouTube"/>
+                            YouTube
+                        </p>
+                        <button>View More</button>
+                    </div>
+                    <img src="img/sns02.png" alt="YouTube"/>
+                </div><!-- .sns01 end -->
+            </div><!-- .sns_in end -->
+        </div><!-- #section5 end -->
+
+        <div class="section fp-auto-height" id="footer">
+            <div class="footer_in">
+                <div class="text">
+                    <p>이엘씨에이한국(유) 대표 SLAVIN PAUL, 서울시 강남구 강남대로 382 (역삼동) 메리츠타워, 06232</p>
+                    <p>사업자등록번호 : 211-81-71889</p>
+                    <p>통신판매업신고번호 : 강남-15737호</p>
+                    <p>고객관리지원팀 : <a href="tel:02-6971-3202">02-6971-3202 </a> 
+                        <a href="consumercare@kr.clinique.com"> consumercare@kr.clinique.com </a></p>
+                </div>
+                <p>
+                    COPYRIGHT © 2021 kwoneunjee. All Rights Reserved 
+                </p>
+            </div><!-- .footer_in end -->
+        </div><!-- #footer end -->
+
+    </div><!-- #fullpage end -->
+</body>
+</html>

@@ -1,0 +1,433 @@
+@charset "utf-8";
+*{margin: 0; padding: 0;}
+li {list-style: none;}
+a {
+    text-decoration: none;
+    display: block;
+    color: #333;
+}
+body, html {
+    background-color: #e7f3ec;
+    color: #333;
+}
+#myVideo {
+    position: absolute;
+    right: 0;
+    top:0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    object-fit: cover;
+    z-index:1;
+}
+span {
+    position: absolute;
+    left: -9999999999px;
+}
+#fp-nav {
+    top: 85%;
+}
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+    background-color: #707070;
+}
+#fp-nav ul li .fp-tooltip {
+    color: #707070;
+}
+
+/**************************************************** header */
+header {
+    height: 70px;
+    line-height: 70px;
+    background-color: #e7f3ec49;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 8;
+    width: 100%;
+}
+header div {
+    width: 1440px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 8;
+}
+header::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+header div h1 {
+    float: left;
+}
+/* header nav .menu {
+    transition: all .5s;
+} */
+header nav > ul > li {
+    display: inline-block;
+    vertical-align: top;
+    width: 120px;
+    text-align: left;
+}
+header nav > ul > li:hover > a {
+    font-weight: bold;
+}
+header .back {
+    width: 100%;
+    height: 220px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: none;          /* !!!!!!!!!!!!!!!!!!!!!!!!! */
+}
+header div .xi-search {
+    position: absolute;
+    top: 25px;
+    right: 0;
+    font-size: 18px;
+    z-index: 9;
+}
+header div nav .depth02 {
+    line-height: 1.8;
+    display: none;         /* !!!!!!!!!!!!!!!!!!!!!!!!! */
+}
+header div nav .depth02 a {
+    font-size: 14px;
+}
+header div nav .depth02 a:hover {
+    font-weight: bold;
+    color: rgb(145, 66, 209);
+}
+header .search {
+    position: absolute;
+    top: 0;
+    right: 265px;
+    width: 280px;
+    display: none;         /* !!!!!!!!!!!!!!!!!!!!!!!!! */
+}
+.search input[type="text"] {
+    position: relative;
+    top: 0;
+    left: 0;
+    border: 0;
+    background-color: #eee;
+    height: 30px;
+    padding: 0 8px;
+    box-sizing: border-box;
+    width: 230px;
+    z-index: 9;
+}
+.search button {
+    border: 0;
+    height: 22px;
+    width: 35px;
+    border-radius: 2px;
+    background-color: #aad7bdd2;
+    position: relative;
+    top: 2px;
+    left: -45px;
+    z-index: 9;
+}
+
+/**************************************************************** #section1 */
+#section1.fp-auto-height.fp-section {
+    width: 100%;
+    height: auto !important; 
+    text-align: center;
+    position: relative;
+    padding-bottom: 140px;
+    padding-top: 140px;
+}
+#section1 h1 {
+    position: absolute;
+    top: 9%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.fp-controlArrow.fp-prev {
+    left: 180px;
+}
+.fp-controlArrow.fp-next {
+    right: 180px;
+}
+.fp-controlArrow {
+    top: 40%;
+}
+button {
+    width: 110px;
+    height: 36px;
+    border-radius: 30px;
+    background-color: #e7f3ec00;
+    cursor: pointer;
+    border: 1px solid #333;
+}
+button:hover {
+    background-color: #333;
+    color: #fff;
+}
+#section1 button {
+    position: absolute;
+    bottom: 10.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+#section1 .slide {
+    width: 1440px;
+    height: 700px;
+    margin: 0 auto;
+}
+#section1 .slide .in {
+    width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+    margin: 0 auto;
+}
+#section1 .slide .in > div {
+    width: 24%;
+}
+#section1 .slide .in > div dl {
+    padding: 15px 30px;
+}
+#section1 .slide .in > div dl dd {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/********************************************************* #section2 */
+#section2 {
+    text-align: center;
+    position: relative;
+}
+#section2 .cont {
+    width: 1440px;
+    margin: 0 auto;
+}
+#section2 .cont > div {
+    display: none;
+}
+#section2 .cont > div.on {
+    display: block;
+}
+
+#section2 .left {
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+}
+#section2 .right {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#section2 .right_left {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+}
+#section2 .center {
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#section2 .center h1 {
+    margin-bottom: 40px;
+}
+#section2 .center p {
+    margin-top: 30px;
+}
+#section2 .right .right_top {
+    position: absolute;
+    top: 80px;
+    right: 250px;
+    z-index: 1;
+}
+#section2 .left .right_top {
+    position: absolute;
+    bottom: 440px;
+    left: 240px;
+    z-index: 1;
+}
+#section2 .right .right_bottom {
+    position: absolute;
+    top: 340px;
+    right: 0;
+}
+#section2 .left .right_bottom {
+    position: absolute;
+    bottom: 42px;
+    left: 0;
+}
+#section2 button {
+    width: 130px;
+    height: 40px;
+    font-size: 16px;
+    margin: 10px 25px;
+}
+#section2 button.on {
+    background-color: #333;
+    color: #fff;
+}
+#section2 .btn {
+    position: absolute;
+    bottom: 85px;
+    left: 47.5%;
+    transform: translateX(-50%);
+    width: 600px;
+    font-size: 20px;
+    margin: 20px 40px;
+}
+
+/************************************************************ #section3 */
+#section3 {
+    padding: 400px 0;
+    position: relative;
+}
+#section3 h1 {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#section3 button {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 50px;
+}
+#section3 .event_in {
+    width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#section3 .event_in > div {
+    width: 32%;
+    position: relative;
+}
+#section3 .event_in > div img {
+    display: block;
+    width: 100%;
+}
+#section3 .event_in > div::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+    transition: all .5s;
+    cursor: pointer;
+}
+#section3 .event_in > div:hover::before {
+    opacity: 1;
+}
+
+/************************************************************ #section4 */
+#section4 {
+    background: url('../img/cont03-back.png') center center / cover no-repeat;
+    text-align: center;
+    padding-top: 240px;
+    padding-bottom: 220px;
+
+}
+#section4 h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+#section4 p:nth-child(2) {
+    font-size: 18px;
+    margin-bottom: 45px;
+    line-height: 1.6;
+}
+#section4 p:nth-child(3) {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 90px;
+}
+
+/************************************************************** #section5 */
+#section5 {
+    text-align: center;
+    padding: 50px 0;
+}
+#section5 h1 {
+    font-style: 45px;
+    margin-bottom: 30px;
+}
+#section5 .sns_in {
+    width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+#section5 .sns_in .sns {
+    width: 50%;
+    border: 1px solid #b2b3b3;
+    display: flex;
+    justify-content: space-between;
+}
+#section5 .sns_in .sns > div {
+    width: 50%;
+    margin-top: 70px;
+}
+#section5 .sns_in .sns > img {
+    width: 50%;
+    
+}
+#section5 .sns_in .sns > div p {
+    font-size: 30px;
+    font-weight: bold;
+}
+#section5 .sns_in .sns > div button {
+    margin-top: 30px;
+}
+#section5 .sns_in .sns > div p img {
+    vertical-align: bottom;
+}
+
+
+/********************************************************** footer */
+#footer {
+    width: 100%;
+    background-color: #ceddd5;
+    text-align: center;
+    padding: 30px 0;
+}
+#footer .footer_in {
+    width: 1500px;
+    margin: 0 auto;
+}
+#footer .footer_in .text p {
+    font-size: 13px;
+    display: inline-block;
+    color: #555;
+    /* letter-spacing: -1px; */
+    padding-bottom: 15px;
+    padding-right: 25px;
+}
+#footer .footer_in .text p:last-child {
+    padding-right: 0;
+}
+#footer .footer_in > .text p a {
+    display: inline-block;
+    color: #555;
+}
+#footer .footer_in > p {
+    font-size: 12px;
+    color: #888;
+}
+
